@@ -8,12 +8,12 @@ fetchData();
 
 async function fetchData(){
     try {
-        let url="http://localhost:3000/products";
-        let res= await fetch(url);
+      
+        let res= await fetch(`https://raushansft.github.io/Dineout-Clone/db.json`);
         let data= await res.json();
-        // console.log(data);
+        console.log(data.products);
         // console.log(data[0]);
-        displayData(data);
+        displayData(data.products);
         
     } catch (error) {
         console.log(error, "Error in fatching data");
